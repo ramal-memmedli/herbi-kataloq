@@ -1,0 +1,188 @@
+﻿@model AddTeyyareVM;
+
+<div class="card mx-4">
+    <form asp-controller="Teyyareler" asp-action="ElaveEt" method="post" enctype="multipart/form-data" class="form-horizontal">
+        <div class="card-header d-flex m-0 py-2 px-4 align-items-center">
+            <strong class="mr-auto">@ViewBag.FormTitle</strong>
+            <div>
+                <button type="submit" class="btn btn-primary btn-lg mr-2">
+                    <i class="fa fa-plus"></i> Əlavə et
+                </button>
+                <a asp-controller="Teyyareler" asp-action="Index" class="btn btn-danger btn-lg">
+                    <i class="fa fa-ban"></i> Ləğv et
+                </a>
+            </div>
+        </div>
+        <div class="card-body card-block">
+
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label asp-for="Adi" class=" form-control-label">Adı</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    <input asp-for="Adi" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label asp-for="Tipi" class=" form-control-label">Tipi</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    <select asp-for="Tipi" class="form-control">
+                        <option value="Qırıcı">Qırıcı</option>
+                        <option value="Bombardımançı">Bombardımançı</option>
+                        <option value="Kəşfiyyat">Kəşfiyyat</option>
+                        <option value="Pilotsuz">Pilotsuz</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label asp-for="IlkUcusTarixi" class=" form-control-label">İlk uçuş tarixi</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    <input asp-for="IlkUcusTarixi" type="date" class="form-control">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label asp-for="IstifadesiDavamEdirmi" class="form-check-label ">
+                        İstifadəsi davam edirmi?
+                    </label>
+                </div>
+                <div class="col-12 col-md-9">
+                    <input asp-for="IstifadesiDavamEdirmi" type="checkbox" class="mx-1 form-check-input">
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">İstehsalçı</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label asp-for="Istehsalci.Olke" class="control-label mb-1">Ölkə</label>
+                                <input asp-for="Istehsalci.Olke" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label asp-for="Istehsalci.SirketinAdi" class="control-label mb-1">Şirkət</label>
+                                <input asp-for="Istehsalci.SirketinAdi" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">Ölçüləri</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label asp-for="Olculeri.Uzunlugu" class=" form-control-label">Uzunluğu</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input asp-for="Olculeri.Uzunlugu" type="text" placeholder="metr" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label asp-for="Olculeri.Eni" class=" form-control-label">Qanad genişliyi</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input asp-for="Olculeri.Eni" type="text" placeholder="metr" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label asp-for="Olculeri.Hundurluyu" class=" form-control-label">Hündürlüyü</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input asp-for="Olculeri.Hundurluyu" type="text" placeholder="metr" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label asp-for="Olculeri.Cekisi" class=" form-control-label">Çəkisi</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input asp-for="Olculeri.Cekisi" type="text" placeholder="kiloqram" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">Qabiliyyətləri</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label asp-for="Qabiliyyetleri.MaksimumSureti" class="mb-1 form-control-label">Maksimum sürəti</label>
+                                <input asp-for="Qabiliyyetleri.MaksimumSureti" type="text" placeholder="mach (səs sürətinin x qatı)" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label asp-for="Qabiliyyetleri.MaksimumUcusHundurluyu" class="mb-1 form-control-label">Maksimum uçuş hündürlüyü</label>
+                                <input asp-for="Qabiliyyetleri.MaksimumUcusHundurluyu" type="text" placeholder="metr" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">Mühərriki</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="form-group">
+                                <label asp-for="Muherriki.Modeli" class="control-label mb-1">Modeli</label>
+                                <input asp-for="Muherriki.Modeli" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="form-group">
+                                <label asp-for="Muherriki.Istehsalcisi" class="control-label mb-1">İstehsalçı şirkət</label>
+                                <input asp-for="Muherriki.Istehsalcisi" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="form-group">
+                                <label asp-for="Muherriki.Gucu" class="control-label mb-1">Gücü</label>
+                                <input asp-for="Muherriki.Gucu" type="text" placeholder="kN" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label asp-for="Qeyd" class=" form-control-label">Qeyd</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    <textarea asp-for="Qeyd" rows="9" placeholder="Kontent..." class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label asp-for="FotoFile" class=" form-control-label">Fotosu</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    <input asp-for="FotoFile" accept="image/*" type="file" class="form-control-file">
+                </div>
+            </div>
+        </div>
+    </form>
+    
+</div>

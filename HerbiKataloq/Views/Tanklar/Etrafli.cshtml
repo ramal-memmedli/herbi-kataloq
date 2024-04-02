@@ -1,0 +1,128 @@
+﻿@model GetTankVM
+
+@{
+    if (Model.Silahlari is null)
+    {
+        Model.Silahlari = new List<TankSilahiVM>();
+    }
+}
+
+<div class="main-content p-0">
+    <div class="section__content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h3>@Model.Adi</h3>
+                            <div>
+                                <a asp-controller="Tanklar" asp-action="DuzelisEt" asp-route-id="@Model.Id" class="btn btn-warning text-white mr-2 "><i class="fa fa-edit"></i> Düzəliş et</a>
+                                <a asp-controller="Tanklar" asp-action="Sil" asp-route-id="@Model.Id" class="btn btn-danger text-white"><i class="fa fa-trash"></i> Sil</a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <img style="width: 100%; height: auto;" class="mb-4" src="data:image/png;base64, @Model.Foto">
+
+                            <div class="d-flex flex-wrap">
+                                <div class="col-6">
+                                    <div class="card">
+                                        <div class="card-header">Haqqında</div>
+                                        <div class="card-body">
+                                            <ul style="list-style-type: none;">
+                                                <li>Sinfi: @Model.Sinfi</li>
+                                                <li>Zirehi: @Model.Zirehi</li>
+                                                <li>Yanacaq tutumu: @Model.YanacaqTutumu litr</li>
+                                                <li>Personal sayı: @Model.PersonalSayi nəfər</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="card">
+                                        <div class="card-header">İstehsalçı</div>
+                                        <div class="card-body">
+                                            <ul style="list-style-type: none;">
+                                                <li>Şirkətin adı: @Model.Istehsalci.SirketinAdi</li>
+                                                <li>Ölkə: @Model.Istehsalci.Olke</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-wrap">
+                                <div class="col-4">
+                                    <div class="card">
+                                        <div class="card-header">Ölçüləri</div>
+                                        <div class="card-body">
+                                            <ul style="list-style-type: none;">
+                                                <li>Uzunluğu: @Model.Olculeri.Uzunlugu metr</li>
+                                                <li>Qanad genişliyi: @Model.Olculeri.Eni metr</li>
+                                                <li>Hündürlüyü: @Model.Olculeri.Hundurluyu metr</li>
+                                                <li>Çəkisi: @Model.Olculeri.Cekisi kg</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="card">
+                                        <div class="card-header">Mühərriki</div>
+                                        <div class="card-body">
+                                            <ul style="list-style-type: none;">
+                                                <li>Modeli: @Model.Muherriki.Modeli</li>
+                                                <li>İstehsalçısı: @Model.Muherriki.Istehsalcisi</li>
+                                                <li>Yanacaq növü: @Model.Muherriki.YanacaqNovu</li>
+                                                <li>Gücü: @Model.Muherriki.Gucu hp</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="card">
+                                        <div class="card-header">Qabiliyyətləri</div>
+                                        <div class="card-body">
+                                            <ul style="list-style-type: none;">
+                                                <li>Müharibə radiusu: @Model.Qabiliyyetleri.MuharibeRadiusu km</li>
+                                                <li>Yolda maksimum sürəti: @Model.Qabiliyyetleri.YoldaMaksimumSureti km/s</li>
+                                                <li>Yolsuzluq şəraitində maksimum sürəti: @Model.Qabiliyyetleri.YolsuzluqSeraitindeMaksimumSureti km/s</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    Qeyd
+                                </div>
+                                <div class="card-body">
+                                    <p>@Model.Qeyd</p>
+                                </div>
+                            </div>
+
+                            @if(Model.Silahlari.Count > 0)
+                            {
+                                <div class="card">
+                                    <div class="card-header d-flex justify-content-between">
+                                        <a>Silahları</a>
+                                        <div>
+                                            <a asp-controller="Tanklar" asp-action="SilahElaveEt" asp-route-id="@Model.Id" class="btn btn-success text-white mr-2 "><i class="fa fa-plus"></i> Əlavə et</a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        @foreach (TankSilahiVM tankSilahi in Model.Silahlari)
+                                        {
+                                            <p>@("Adı: " + tankSilahi.Adi + ", Təyinatı: " + tankSilahi.Teyinati + ", Çapı: " + tankSilahi.Capi + "mm, Atış məsafəsi: " + tankSilahi.AtisMesafesi + " m")</p>
+                                        }
+                                    </div>
+                                </div>
+                            }
+
+                            <strong>0 dəyərin təyin edilmədiyi mənasına gəlir*</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

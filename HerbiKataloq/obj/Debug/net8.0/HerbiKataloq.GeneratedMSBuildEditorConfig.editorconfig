@@ -1,0 +1,71 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = HerbiKataloq
+build_property.RootNamespace = HerbiKataloq
+build_property.ProjectDir = C:\Users\Ramal\source\repos\HerbiKataloq\HerbiKataloq\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Ramal\source\repos\HerbiKataloq\HerbiKataloq
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Ramal/source/repos/HerbiKataloq/HerbiKataloq/Views/Esas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNhc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ramal/source/repos/HerbiKataloq/HerbiKataloq/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ramal/source/repos/HerbiKataloq/HerbiKataloq/Views/Tanklar/DuzelisEt.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFua2xhclxEdXplbGlzRXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ramal/source/repos/HerbiKataloq/HerbiKataloq/Views/Tanklar/ElaveEt.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFua2xhclxFbGF2ZUV0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ramal/source/repos/HerbiKataloq/HerbiKataloq/Views/Tanklar/Etrafli.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFua2xhclxFdHJhZmxpLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ramal/source/repos/HerbiKataloq/HerbiKataloq/Views/Tanklar/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFua2xhclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ramal/source/repos/HerbiKataloq/HerbiKataloq/Views/Tanklar/SilahElaveEt.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFua2xhclxTaWxhaEVsYXZlRXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ramal/source/repos/HerbiKataloq/HerbiKataloq/Views/Teyyareler/DuzelisEt.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGV5eWFyZWxlclxEdXplbGlzRXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ramal/source/repos/HerbiKataloq/HerbiKataloq/Views/Teyyareler/ElaveEt.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGV5eWFyZWxlclxFbGF2ZUV0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ramal/source/repos/HerbiKataloq/HerbiKataloq/Views/Teyyareler/Etrafli.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGV5eWFyZWxlclxFdHJhZmxpLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ramal/source/repos/HerbiKataloq/HerbiKataloq/Views/Teyyareler/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGV5eWFyZWxlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ramal/source/repos/HerbiKataloq/HerbiKataloq/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ramal/source/repos/HerbiKataloq/HerbiKataloq/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

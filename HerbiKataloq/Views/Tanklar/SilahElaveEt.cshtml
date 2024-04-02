@@ -1,0 +1,57 @@
+﻿@model TankSilahiVM;
+
+<div class="card mx-4">
+    <form asp-controller="Tanklar" asp-action="SilahElaveEt" method="post" enctype="multipart/form-data" class="form-horizontal">
+        <div class="card-header d-flex m-0 py-2 px-4 align-items-center">
+            <strong class="mr-auto">@ViewBag.FormTitle</strong>
+            <div>
+                <button type="submit" class="btn btn-primary btn-lg mr-2">
+                    <i class="fa fa-plus"></i> Əlavə et
+                </button>
+                <a asp-controller="Tanklar" asp-action="Etrafli" asp-route-id="@Model.TankId" class="btn btn-danger btn-lg">
+                    <i class="fa fa-ban"></i> Ləğv et
+                </a>
+            </div>
+        </div>
+        <div class="card-body card-block">
+            <div class="row">
+                <div class="col-3">
+                    <div class="form-group">
+                        <label asp-for="Adi" class="mb-1 form-control-label">Adı</label>
+                        <input asp-for="Adi" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-group">
+                        <label asp-for="Capi" class="mb-1 form-control-label">Çapı</label>
+                        <input asp-for="Capi" type="text" placeholder="millimetr" class="form-control">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-group">
+                        <label asp-for="AtisMesafesi" class="mb-1 form-control-label">Atış məsafəsi</label>
+                        <input asp-for="AtisMesafesi" type="number" placeholder="metr" class="form-control">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-check">
+                        <a>Təyinatı</a>
+                        <div class="d-flex">
+                            <div class="radio">
+                                <label asp-for="Teyinati" class="form-check-label mr-5">
+                                    <input type="radio" asp-for="Teyinati" value="Əsas"> Əsas
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label asp-for="Teyinati" class="form-check-label ">
+                                    <input type="radio" asp-for="Teyinati" value="Əlavə"> Əlavə
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</div>

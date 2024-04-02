@@ -1,0 +1,100 @@
+﻿@model GetTeyyareVM
+
+<div class="main-content p-0">
+                <div class="section__content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header d-flex justify-content-between align-items-center">
+                                        <h3>@Model.Adi</h3>
+                                        <div>
+                                            <a asp-controller="Teyyareler" asp-action="DuzelisEt" asp-route-id="@Model.Id" class="btn btn-warning text-white mr-2 "><i class="fa fa-edit"></i> Düzəliş et</a>
+                                            <a asp-controller="Teyyareler" asp-action="Sil" asp-route-id="@Model.Id" class="btn btn-danger text-white"><i class="fa fa-trash"></i> Sil</a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <img style="width: 100%; height: auto;" class="mb-4" src="data:image/png;base64, @Model.Foto">
+
+                            <div class="d-flex flex-wrap">
+                                <div class="col-6">
+                                    <div class="card">
+                                        <div class="card-header">Haqqında</div>
+                                        <div class="card-body">
+                                            <ul style="list-style-type: none;">
+                                                <li>Tipi: @Model.Tipi</li>
+                                                <li>İlk uçuş tarixi: @Model.IlkUcusTarixi</li>
+                                                <li>İstifadəsi davam edirmi?: @(Model.IstifadesiDavamEdirmi ? "Bəli" : "Xeyr")</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="card">
+                                        <div class="card-header">İstehsalçı</div>
+                                        <div class="card-body">
+                                            <ul style="list-style-type: none;">
+                                                <li>Şirkətin adı: @Model.Istehsalci.SirketinAdi</li>
+                                                <li>Ölkə: @Model.Istehsalci.Olke</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                        
+                                        <div class="d-flex flex-wrap">
+                                <div class="col-4">
+                                    <div class="card">
+                                        <div class="card-header">Ölçüləri</div>
+                                        <div class="card-body">
+                                            <ul style="list-style-type: none;">
+                                                <li>Uzunluğu: @Model.Olculeri.Uzunlugu metr</li>
+                                                <li>Qanad genişliyi: @Model.Olculeri.Eni metr</li>
+                                                <li>Hündürlüyü: @Model.Olculeri.Hundurluyu metr</li>
+                                                <li>Çəkisi: @Model.Olculeri.Cekisi kg</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="card">
+                                        <div class="card-header">Mühərriki</div>
+                                        <div class="card-body">
+                                            <ul style="list-style-type: none;">
+                                                <li>Modeli: @Model.Muherriki.Modeli</li>
+                                                <li>İstehsalçısı: @Model.Muherriki.Istehsalcisi</li>
+                                                <li>Gücü: @Model.Muherriki.Gucu kN</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="card">
+                                        <div class="card-header">Qabiliyyətləri</div>
+                                        <div class="card-body">
+                                            <ul style="list-style-type: none;">
+                                                <li>Maksimum sürəti: @Model.Qabiliyyetleri.MaksimumSureti mach</li>
+                                                <li>Maksimum uçuş hündürlüyü: @Model.Qabiliyyetleri.MaksimumUcusHundurluyu metr</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header">
+                                                Qeyd
+                                            </div>
+                                            <div class="card-body">
+                                                <p>@Model.Qeyd</p>
+                                            </div>
+                                        </div>
+
+                                        <strong>0 dəyərin təyin edilmədiyi mənasına gəlir*</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>

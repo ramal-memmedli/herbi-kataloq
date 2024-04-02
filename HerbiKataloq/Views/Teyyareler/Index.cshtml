@@ -1,0 +1,55 @@
+﻿@model List<IndexTeyyareVM>
+
+
+<!-- DATA TABLE-->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-data__tool">
+                    <div class="table-data__tool-left">
+                        <form method="get" asp-controller="Teyyareler" asp-action="Index">
+                            <div class="rs-select2--light rs-select2--md">
+                                <select class="js-select2" name="category">
+                                    <option value="" selected="selected">Bütün</option>
+                                    <option value="Qırıcı">Qırıcı</option>
+                                    <option value="Bombardımançı">Bombardımançı</option>
+                                    <option value="Kəşfiyyat">Kəşfiyyat</option>
+                                    <option value="Pilotsuz">Pilotsuz</option>
+                                    
+                                </select>
+                                <div class="dropDownSelect2"></div>
+                            </div>
+                            <button type="submit" class="au-btn-filter">
+                                <i class="fa fa-refresh"></i>Tətbiq et
+                            </button>
+                        </form>
+                    </div>
+                    <div class="table-data__tool-right">
+                        <a asp-controller="teyyareler" asp-action="elaveet" class="au-btn au-btn-icon au-btn--green au-btn--small">
+                            <i class="zmdi zmdi-plus"></i>Əlavə et
+                        </a>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    @foreach (IndexTeyyareVM teyyare in Model)
+                    {
+                        <div asp-controller="teyyareler" asp-action="etrafli" asp-route-id="@teyyare.Id" class="col-md-4">
+                            <div class="card">
+                                <img class="card-img-top" src="data:image/png;base64, @teyyare.Foto" alt="@teyyare.Adi">
+                                <div class="card-body d-flex justify-content-between">
+                                    <a class="card-title">Adı: @teyyare.Adi</a>
+                                    <p class="card-text">Tipi: @teyyare.Tipi</p>
+                                </div>
+                                <div class="card-footer d-flex justify-content-end">
+                                    <a asp-controller="Teyyareler" asp-action="Etrafli" asp-route-id="@teyyare.Id" class="btn btn-primary text-white">Ətraflı</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END DATA TABLE-->
